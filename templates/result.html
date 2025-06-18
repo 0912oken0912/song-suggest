@@ -2,15 +2,16 @@
 <head>
     <title>Index</title>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
- <h1>入力してくれてありがとう</h1>
+ <h1>入力してくれてありがとう！</h1>
     <h1>おすすめの曲はこれです</h1>
     <ul>
-            <li>{{ song_name }}</li>
-            <li>{{ score }}</li>
-            <li>{{ extract }}</li>
+            <li>曲名:{{ song_name }}</li>
+            <li>類似度:{{ score }}</li>
+            <li>関連するキーワード:{{ extract }}</li>
     </ul>
   <form action="/" method="get">
     <button type="submit">ホームに戻る</button>

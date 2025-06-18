@@ -2,12 +2,13 @@
 <head>
     <title>Index</title>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
  <h1>ようこそ</h1>
   <p>ここではあなたの好きな曲をAIが分析して紹介できます。</p>
-  <p>あなたの今の気持ちを入力してください：</p>
+  <p>あなたの今の気持ちを入力してください, 文章が長いほど精度が上がります：</p>
 
   <form action="/result" method="post">
     「<input type="text" name="user_text" placeholder="文章を入力してください">」
